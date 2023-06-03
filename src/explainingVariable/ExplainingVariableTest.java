@@ -1,5 +1,23 @@
 package explainingVariable;
 
+/*
+ * En la clase ClienteRefactor
+ * 
+ * Primer selecciono el código "(edad >= 18 && edad <= 65)" y luego 
+ * con el botón derecho "Refactor" -> "Extract Local Variable"
+ * el nombre que le doy es "esEdadLaboral".
+ * 
+ * Segundo selecciono el código "(salario - (salario * 0.5f)) < 1200f" y luego 
+ * con el botón derecho "Refactor" -> "Extract Local Variable"
+ * el nombre que le doy es "esSalarioBajo".
+ *
+ * Tercero selecciono el código "cantidadTotal * 0.5 < 500" y luego 
+ * con el botón derecho "Refactor" -> "Extract Local Variable"
+ * el nombre que le doy es "esPocaCantidad".
+ * 
+ * Y ejecuto el test para comprobar que todo ha ido bien
+ */
+
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;

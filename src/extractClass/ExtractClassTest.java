@@ -12,6 +12,15 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+/*
+ * En la clase ClienteRedactor
+ * 
+ * Selecciono el nombre de la clase "ClienteRefactor" y con el botón derecho
+ * del ratón selecciono "Refactor" -> "Extract Class" allí elijo los atributos 
+ * que utilizaré en la nueva clase y a la clase nueva le doy el nombre
+ * "TarjetaCredito", creando getters y setters. Acepto y realizo el test.
+ */
+
 public class ExtractClassTest {
 
 	@Test

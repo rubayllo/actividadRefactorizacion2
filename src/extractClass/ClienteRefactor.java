@@ -2,12 +2,17 @@ package extractClass;
 
 import java.util.Date;
 
+/*
+ * Selecciono el nombre de la clase "ClienteRefactor" y con el botón derecho
+ * del ratón selecciono "Refactor" -> "Extract Class" allí elijo los atributos 
+ * que utilizaré en la nueva clase y a la clase nueva le doy el nombre
+ * "TarjetaCredito", creando getters y setters. Acepto y realizo el test.
+ */
+
 public class ClienteRefactor {
 	private String nombre;
 	private String dni;
-	private String tarjetaCredito;
-	private Date fechaTarjetaCredito;
-	private int numeroControTarjetaCredito;
+	private TarjetaCredito data = new TarjetaCredito();
 
 	public ClienteRefactor(String nombre, String dni) {
 		this.nombre = nombre;
@@ -15,7 +20,7 @@ public class ClienteRefactor {
 	}
 
 	public boolean estaCaducada() {
-		return fechaTarjetaCredito.before(new Date());
+		return data.getFechaTarjetaCredito().before(new Date());
 	}
 
 	public boolean esValidoDni() {
@@ -45,27 +50,27 @@ public class ClienteRefactor {
 	}
 
 	public String getCreditCard() {
-		return tarjetaCredito;
+		return data.getTarjetaCredito();
 	}
 
 	public void setCreditCard(String creditCard) {
-		this.tarjetaCredito = creditCard;
+		this.data.setTarjetaCredito(creditCard);
 	}
 
 	public Date getCreditCardDate() {
-		return fechaTarjetaCredito;
+		return data.getFechaTarjetaCredito();
 	}
 
 	public void setCreditCardDate(Date creditCardDate) {
-		this.fechaTarjetaCredito = creditCardDate;
+		this.data.setFechaTarjetaCredito(creditCardDate);
 	}
 
 	public int getCreditCardControlNumber() {
-		return numeroControTarjetaCredito;
+		return data.getNumeroControTarjetaCredito();
 	}
 
 	public void setCreditCardControlNumber(int creditCardControlNumber) {
-		this.numeroControTarjetaCredito = creditCardControlNumber;
+		this.data.setNumeroControTarjetaCredito(creditCardControlNumber);
 	}
 
 }
